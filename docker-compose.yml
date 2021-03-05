@@ -1,0 +1,10 @@
+version: "3"
+services:
+    server:  
+        build: .
+        image: jenkins_ros
+        container_name: jenkins_con
+        ports:
+          - 8080:8080
+        volumes:
+          - ./jenkins_home:/var/jenkins_home
